@@ -129,8 +129,19 @@
                 // Hide Next button
                 document.getElementById('nextButton').classList.add('hidden');
             }
-            
-            
+
+            // function to Check user answer
+            function checkAnswer(selectedOption) {
+                if (selectedOption === questions[currentQuestion].answer) {
+                    score++;
+                }
+                //Show next button
+                document.getElementById('nextButton').classList.remove('hidden');
+
+                // disables all answer buttons after selection
+                document.querySelectorAll('.option').forEach((btn) => btn.disabled = true);
+            }
+
 
         </script>
 
