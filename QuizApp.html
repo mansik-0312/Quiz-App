@@ -102,10 +102,36 @@
             ];
             // console.log(questions)
 
+
             // Initialize variables
 
             let currentQuestion = 0;
             let score = 0;
+
+            // function to load a question
+            function loadQuestion() {
+                // updates  question text with current question
+                document.getElementById('question').textContent = questions[currentQuestion].question;
+
+                const optionsContainer = document.getElementById('options');
+
+                // clears previous options from options
+                optionsContainer.innerHTML = '';
+
+                questions[currentQuestion].options.forEach((option) => {
+                    const button = document.createElement('button');
+                    button.textContent = option;
+                    button.classList.add('option');
+                    button.onclick = () => checkAnswer(option);
+                    optionsContainer.appendChild(button);
+                });
+
+                // Hide Next button
+                document.getElementById('nextButton').classList.add('hidden');
+            }
+            
+            
+
         </script>
 
     </div>
