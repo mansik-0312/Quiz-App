@@ -142,6 +142,24 @@
                 document.querySelectorAll('.option').forEach((btn) => btn.disabled = true);
             }
 
+            // Handle 'Next' button click
+            document.getElementById('nextButton').addEventListener('click', () => {
+                // Moves to the next question.
+                currentQuestion++;
+                if (currentQuestion < questions.length) {
+                    /*If more questions exist, loadQuestion() is called.*/
+                    loadQuestion();
+                } else {
+                    document.getElementById('question').textContent = 'Quiz completed';
+                    document.getElementById('options').classList.add('hidden');
+                    document.getElementById('nextButton').classList.add('hidden');
+                    document.getElementById('score').textContent = `Your score: ${score}/${questions.length}`;
+                    document.getElementById('score').classList.add('hidden');
+                }
+            });
+
+            loadQuestion();
+
 
         </script>
 
