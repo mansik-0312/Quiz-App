@@ -1,5 +1,3 @@
-import { questions } from './questionData.js';
-
 let currentQuestion = 0;
 let score = 0;
 

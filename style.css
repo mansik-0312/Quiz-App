@@ -30,6 +30,7 @@ body {
     display: flex; 
     flex-direction: column; 
     gap: 10px; 
+    margin-bottom: 15px;
 }
 
 .option { 
@@ -62,5 +63,5 @@ body {
 /* Hidden Class */
 .hidden { 
     display: none;
-    padding: 50px; 
+    margin-top: 30px; 
 }
