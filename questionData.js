@@ -1,6 +1,7 @@
 export const questions = [
     { 
-        question: "What is 5 + 3?", options: ["7", "8", "9"], 
+        question: "What is 5 + 3?", 
+        options: ["7", "8", "9"], 
         answer: "8" 
     },
     { 
