@@ -1,0 +1,14 @@
+# Step 1: Use an official Nginx image from Docker Hub
+FROM nginx:alpine
+
+# Step 2: Set the working directory to /usr/share/nginx/html
+WORKDIR /usr/share/nginx/html
+
+# Step 3: Copy all files from the local directory (Quiz App) to the container's web root
+COPY . /usr/share/nginx/html
+
+# Step 4: Expose port 80 to make the app accessible
+EXPOSE 8089
+
+# Step 5: The default command for the container (nginx starts by default in this image)
+CMD ["nginx", "-g", "daemon off;"]
